@@ -16,6 +16,9 @@ logger = logging.getLogger(__name__)
 
 # Create your views here.
 
+def index(request):
+    context = {}
+    return render(request, 'djangoapp/index.html', context)
 
 # Create an `about` view to render a static about page
 def about(request):
