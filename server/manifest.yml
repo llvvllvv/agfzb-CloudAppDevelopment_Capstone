@@ -1,11 +1,11 @@
   applications:
-  - name: liv-djangoapp
+  - name: livi-djangoapp
     routes:
-      - route: lv.eu-gb.mybluemix.net
+      - route: livi.eu-gb.mybluemix.net
     memory: 128M
     buildpack: python_buildpack
-  - name: lv-djangoapp-nginx
+  - name: livi-djangoapp-nginx
     routes:
-      - route: lv.eu-gb.mybluemix.net/static
+      - route: livi.eu-gb.mybluemix.net/static
     memory: 128M
     buildpack: staticfile_buildpack
