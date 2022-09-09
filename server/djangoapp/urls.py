@@ -9,7 +9,8 @@ urlpatterns = [
     # view refers to the view function
     # name the URL
 
-    path('', views.index, name='index'),
+    path(route='', view=views.index, name='index'),
+    path(route='index/', view=views.get_dealerships, name='index'),
 
     # path for about view
     path(route='about/', view=views.about, name='about'),
@@ -18,21 +19,22 @@ urlpatterns = [
     path(route='contact/', view=views.contact, name='contact'),
 
     # path for registration
-    path(route='registration/', view=views.registration_request, name='registration'),
+     path('signup/', views.registration_request, name='registration'),
 
     # path for login
-    path(route='login', view=views.login_request, name='login'),
+    path('login/', views.login_request, name='login'),
 
     # path for get_dealer_details
-    path(route='get_dealer_details', view=views.get_dealer_details, name='dealer_details'),
-
+    
     # path for logout
-    path(route='logout', view=views.logout_request, name='logout'),
+    path('logout/', views.logout_request, name='logout'),
 
     # path for get_dealership
     path(route='', view=views.get_dealerships, name='index'),
 
     # path for dealer reviews view
-    path(route='dealer/<int:dealer_id>/', view=views.get_dealer_details, name='dealer_details'),
+    path(route='dealer/<int:id>/', view=views.get_dealer_details, name='dealer_details'),
+
+    path('dealer/<int:id>/add-review/', views.add_review, name='add_review')
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
