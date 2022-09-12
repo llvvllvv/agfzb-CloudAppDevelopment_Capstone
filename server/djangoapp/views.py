@@ -107,7 +107,7 @@ def get_dealerships(request):
     if request.method == "GET":
         context = {}
         context=dict()
-        url = ""
+        url = "https://eu-gb.functions.appdomain.cloud/api/v1/web/Sampleorga_djangoserver-space/dealership-package/get-dealership"
         
         # Get dealers from the URL
 
